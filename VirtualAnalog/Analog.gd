@@ -2,7 +2,7 @@ extends Node2D
 
 # Virtual Joystick
 # Author : Komang Buda Artha
-#License:  You're free to use these game assets in any project, personal or commercial. 
+#License:  You're free to use these game in any project, personal or commercial. 
 #There's no need to ask permission before using these. 
 #Giving attribution is not required, but is greatly appreciated!
 
