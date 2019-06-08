@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Analog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://set2_background.png" type="Texture" id=4]
+
+[node name="Main" type="Node2D"]
+
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" type="KinematicBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player" index="0"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Analog" parent="Player/CanvasLayer" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 166.015, 456.041 )
+SCALE = 1
+
+[node name="Sprite" type="Sprite" parent="Player" index="1"]
+
+texture = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="Player" index="2"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="set2_background" type="Sprite" parent="." index="1"]
+
+modulate = Color( 0.636719, 0.027359, 0.027359, 1 )
+position = Vector2( 14.6475, 0.214462 )
+z_index = -3
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+

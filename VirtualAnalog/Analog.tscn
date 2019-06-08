@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Analog.gd" type="Script" id=1]
+[ext_resource path="res://Radius.png" type="Texture" id=2]
+[ext_resource path="res://Button.png" type="Texture" id=3]
+
+[node name="Analog" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+SCALE = 1
+
+[node name="Radius" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Material", "Offset", "Pause", "Transform", "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Button" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Animation", "Offset", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 76.0
+margin_top = -61.0
+margin_right = 456.0
+margin_bottom = -47.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Label"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
